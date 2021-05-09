@@ -1,0 +1,49 @@
+
+# 1.kafka相关参数
+
+## 1.1 kafka消费者相关参数
+   | 配置项 | 描述 | 默认值 | 样例 |
+   | ------ | ------ | ------ | ------ |
+   | kafkaSource.bootstrap.servers | 集群ip和端口列表 | | learn:9092 |
+   | kafkaSource.topics | 消费的topics列表，多个逗号分隔 |  | test1,test2 |
+   | kafkaSource.groupId | 消费组名称 |  | group_kafka_input |
+   | kafkaSource.kerberos | 是否需要过kerberos | false | true |
+   | kafkaSource.autoCommit | 是否开启自动提交offset | true | false|
+
+
+## 1.2 kafka生产者相关参数
+
+
+
+# 2.hdfs相关参数
+
+## 2.1 hdfs写入数据相关参数             
+ | 配置项 | 描述 | 默认值 | 样例 |
+ | ------ | ------ | ------ | ------ |
+ | hdfsSink.path | 写入hdfs的目录 |   |  /user/hive/warehouse_ext/DL/app/raw_data/  |
+         
+         
+## 2.2 hdfs读取数据相关参数
+
+# 3.hive相关参数
+
+## 3.1 hive表写入数据相关参数
+
+
+
+
+## 3.2 hive表读取数据参数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
