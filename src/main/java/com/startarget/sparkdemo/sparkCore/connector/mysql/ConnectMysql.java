@@ -14,7 +14,7 @@ public class ConnectMysql {
         // 注册驱动
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            this.con= DriverManager.getConnection("jdbc:mysql://10.203.127.110:3307/vdf?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC","owvdf","q3XB0T2p");
+            this.con= DriverManager.getConnection("jdbc:mysql://learn:3307/vdf?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC","root","713181");
         } catch (Exception e) {
             e.printStackTrace();
         }

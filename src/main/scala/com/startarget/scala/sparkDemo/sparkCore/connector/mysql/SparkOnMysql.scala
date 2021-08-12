@@ -36,7 +36,7 @@ object SparkOnMysql {
     val lowerBound = 1;
     val upperBound = 6;
     val numPartitions = 2;
-    val url1 = "jdbc:mysql://192.168.0.101:3306/sas_vip?user=root&password=123456";
+    val url1 = "jdbc:mysql://learn:3306/sas_vip?user=root&password=123456";
     val prop1 = new Properties();
     val df1 = sqlContext.read.jdbc(url1, "stock", "id", lowerBound, upperBound, numPartitions, prop1);
     println("第二种方法输出：" + df1.rdd.partitions.size);
@@ -55,7 +55,7 @@ object SparkOnMysql {
     //这个函数相比第一种方式多了predicates参数，我们可以通过这个参数设置分区的依据，来看看例子：
     //这个函数相比第一种方式多了predicates参数，我们可以通过这个参数设置分区的依据，来看看例子：
     val predicates = Array[String]("id <= 2", "id >= 4 and id <= 5 ")
-    val url2 = "jdbc:mysql://192.168.0.101:3306/sas_vip?user=root&password=123456"
+    val url2 = "jdbc:mysql://learn:3306/sas_vip?user=root&password=123456"
     val prop2 = new Properties()
     val df2 = sqlContext.read.jdbc(url, "stock", predicates, prop2)
     println("第三种方法输出："+df2.rdd.partitions.size+","+predicates.length);
@@ -65,7 +65,7 @@ object SparkOnMysql {
 
     //4.通过load获取
     //Spark还提供通过load的方式来读取数据。
-    val url3 = "jdbc:mysql://192.168.0.101:3306/sas_vip?user=root&password=123456"
+    val url3 = "jdbc:mysql://learn:3306/sas_vip?user=root&password=123456"
     val df3 = sqlContext.read.format("jdbc").option("url", url).option("dbtable", "stock").load()
     println("第四种方法输出："+df3.rdd.partitions.size);
     df.collect().foreach(println)
