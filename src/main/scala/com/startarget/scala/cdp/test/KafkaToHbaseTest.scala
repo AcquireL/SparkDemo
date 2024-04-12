@@ -3,7 +3,7 @@ package com.startarget.scala.cdp.test
 import java.util.ResourceBundle
 
 import com.google.gson.Gson
-import com.startarget.scala.cdp.connector.hbase.writeTable.HbaseSinkTableBuild
+//import com.startarget.scala.cdp.connector.hbase.writeTable.HbaseSinkTableBuild
 import com.startarget.scala.cdp.connector.kafka.customer.KafkaSourceBuild
 import com.startarget.scala.cdp.model.User
 import org.apache.kafka.clients.consumer.ConsumerRecord
@@ -26,7 +26,7 @@ object KafkaToHbaseTest {
 
     inputDStream.print()
 
-    HbaseSinkTableBuild.getHbaseSink(ssc.sparkContext,inputDStream)
+//    HbaseSinkTableBuild.getHbaseSink(ssc.sparkContext,inputDStream)
 
     ssc.start()
 
