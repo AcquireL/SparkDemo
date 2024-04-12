@@ -63,6 +63,11 @@
             <version>${spark.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql-kafka-0-10_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-mapreduce -->
 <!--        <dependency>
